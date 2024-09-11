@@ -117,5 +117,5 @@ for %%a in ("*.mxf") do ffmpeg -i "%%a" -s 1280x720 -vcodec libx264 -b:v 1100k -
 
 
 
-COPYFUCKINRIGHT 2013
-YEAH! SCIENCE, BITCH!  
+HELLO FROM 2013
+YEAH! SCIENCE!  
