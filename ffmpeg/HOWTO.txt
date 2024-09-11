@@ -1,0 +1,33 @@
+Condense appropriate lines in FFMPG_GOOD.txt into one line, save as dothething.bat
+(appropriate lines determined by: judges on tracks 3456 or 5678. Refer to FFMP_GOOD.txt for more info)
+
+
+Copy BOTH ffmpeg.exe AND "dothething.bat" into the same folder as all MXF files.
+
+In the folder ABOVE your mxf files (the parent folder), create /mp4out folder.
+
+example:
+
+Y:\  
+	\ mp4out
+		\(empty)
+
+	\ mxf [this folder name doesnt matter]
+		\All MXFs
+		\ffmpeg.exe
+		\dothething.bat
+
+
+In My Computer (or cmd window) navigate to your folder(s) with dothething.bat in it, and run / double click dothething.bat.
+
+Black box will pop up with a bunch of nerd stuff, just let it run.  It's looping through the MXFs and rendering to perfect little MP4s tailored just for critiques. (x264 1280x720 ~1100kbps YUV420 w/ 4x AAC channels, one channel per judge)
+
+Performance should be around 2x-3x realtime, per computer.
+
+All rendered mp4s will end up in \mp4out.
+
+If you want, split the MXFs up so that it can be run on more than one PC at a time, all rendering out to the same mp4out network folder.  
+
+AT LEAST 3 computers can render full-power over a 1gigabit network this way (up to 9x realtime)
+
+Is there a better way to do this? NO, I WISH. There is no GUI-based software that can handle our MXFs batch rendering into exactly what we need.   Luckily, FFMPEG can be run via PHP system commands, so if you're feeling adventurous you can create a neat web app just for local rendering.  There's your GUI.

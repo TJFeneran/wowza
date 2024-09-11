@@ -1,0 +1,1 @@
+for %%a in ("*.mxf") do ffmpeg -i "%%a" -s 848x480 -vcodec libx264 -b:v 1000k -maxrate 1100k -bufsize 1024k -profile:v main -pix_fmt yuv420p -ss 30 -movflags faststart -t 30 -map 0:0 -map 0:1 -map_channel 0.1.0:0.1.0 -map_channel 0.1.0:0.1.1 -c:a:0 aac -b:a:0 64k -ac:a:0 1 -r:a:0 44100 -strict experimental -y "../mp4out/%%~na_MP4_PVW.mp4"

@@ -1,0 +1,27 @@
+<!-- PUT INTO vods3/Application.xml (should already exist, is NOT under /applications -->
+
+<MediaReader>
+        <Properties>
+                <Property>
+                        <Name>randomAccessReaderClass</Name>
+                        <Value>com.wowza.wms.plugin.amazonaws.ec2.mediacache.MediaCacheRandomAccessReaderAmazonEC2</Value>
+                </Property>
+                <Property>
+                        <Name>bufferSeekIO</Name>
+                        <Value>true</Value>
+                        <Type>Boolean</Type>
+                </Property>
+        </Properties>
+</MediaReader>
+
+<Properties>
+        <!-- Set these two properties to do S3 authentication -->
+        <Property>
+                <Name>awsAccessKeyId</Name>
+                <Value>YOUR_AKID</Value>
+        </Property>
+        <Property>
+                <Name>awsSecretAccessKey</Name>
+                <Value>YOUR_SKID</Value>
+        </Property>
+</Properties>
