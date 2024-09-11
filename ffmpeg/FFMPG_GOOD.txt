@@ -3,7 +3,7 @@ HOW TO FFMPEG:
 If judges are on 5 6 7 8, take single-line code from top half
 If judges are on 3 4 5 6, take single-line code from bottom half
 If for some reason it's neither of those, change (-map 0:5 -map 0:6 -map 0:7 -map 0:8 in single line) to appropriate tracks (where 5 6 7 8 are audio track numbers. ignore the -map 0:0, that's video.)
-Copy only that line of code into a new notepad file, save as 'fuckyeah.bat' (or whatever you want to call it)
+Copy only that line of code into a new notepad file, save as 'dothething.bat' (or whatever you want to call it)
 __________________________________________
 
 
